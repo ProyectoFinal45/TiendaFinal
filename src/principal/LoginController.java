@@ -50,6 +50,7 @@ public class LoginController implements Initializable {
             if(usuario == null){
                 JOptionPane.showMessageDialog(null, "Datos de acceso incorrectos");
             }else{
+                InicioController.user = nombre;
                 loadStage("/principal/inicio.fxml", e);
             }
         }   

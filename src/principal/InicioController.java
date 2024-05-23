@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
  * @author Admin
  */
 public class InicioController implements Initializable {
+    public static String user;
 
     /**
      * Initializes the controller class.
