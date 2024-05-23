@@ -70,6 +70,19 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Button>
+                  <Label text="Total" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="130.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </children>
