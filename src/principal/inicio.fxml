@@ -39,12 +39,12 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Label>
-            <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Cerrar sesion">
+            <Button fx:id="salir" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Cerrar sesion">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Carrito">
+            <Button fx:id="btncarrito" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Carrito">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -71,7 +71,7 @@
                         <Font name="System Bold" size="11.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Agregar al carrito">
+                  <Button fx:id="iphone12" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Agregar al carrito">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

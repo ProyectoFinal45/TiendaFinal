@@ -54,8 +54,8 @@
             <TableView prefHeight="200.0" prefWidth="430.0">
               <columns>
                 <TableColumn prefWidth="143.0" text="Modelo" />
-                <TableColumn prefWidth="143.0" text="Descripcion" />
-                  <TableColumn prefWidth="144.0" text="Precio" />
+                <TableColumn prefWidth="180.0" text="Descripcion" />
+                  <TableColumn prefWidth="106.0" text="Precio" />
               </columns>
             </TableView>
             <VBox alignment="TOP_CENTER" prefHeight="280.0" prefWidth="170.0">

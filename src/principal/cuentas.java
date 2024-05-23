@@ -47,7 +47,7 @@ public class cuentas {
     public User CrearNodo (String nombre, String contraseña){
         User info, p;
         String nom;
-        if (nombre.equals("") || nombre.equals("")){
+        if (nombre.equals("") || contraseña.equals("")){
             JOptionPane.showMessageDialog(null, "Ambos campos son obligatorios, por favor ingrese su usuario y contraseña");
             return null;
         } else {
@@ -62,6 +62,7 @@ public class cuentas {
             }while (p != null);
             if (p == null){
                 info = new User(nom, contraseña);
+                JOptionPane.showMessageDialog(null, "Registro exitoso, inicie sesion en login");
                 return info;
             }else{
                 return null;

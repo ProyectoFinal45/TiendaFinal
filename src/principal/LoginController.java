@@ -33,7 +33,7 @@ import javax.swing.JOptionPane;
  */
 public class LoginController implements Initializable {
     public static User usuario;
-    private cuentas model = new cuentas();
+    public static cuentas model = RegistroController.model;
     
     @FXML
     private TextField user, contra;

@@ -20,7 +20,7 @@ import javafx.scene.input.KeyEvent;
  */
 public class RegistroController implements Initializable {
     
-    private cuentas model = new cuentas();
+    public static cuentas model = new cuentas();
     
     @FXML
     private TextField user, contra;
