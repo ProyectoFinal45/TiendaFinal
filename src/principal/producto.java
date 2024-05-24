@@ -6,7 +6,7 @@ package principal;
 
 /**
  *
- * @author danie
+ * @author Admin
  */
 public class producto {
     String modelo, comprador, descripcion, precio;

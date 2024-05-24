@@ -26,6 +26,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
@@ -34,7 +35,7 @@ import javax.swing.JOptionPane;
 /**
  * FXML Controller class
  *
- * @author danie
+ * @author Admin
  */
 public class CarritoController implements Initializable {
     
@@ -64,7 +65,31 @@ public class CarritoController implements Initializable {
         Object evt = e.getSource();
         
         if(evt.equals(detalles)){
-            JOptionPane.showMessageDialog(null, carrito.cab);
+            InicioController.carro.getCarrito();
+            String produ = tabla.getSelectionModel().getSelectedItem().getModelo();
+            producto ver = InicioController.carro.cab;
+            while(ver != null){
+                if(ver.modelo.equals(produ)){
+                    DetallesController.mostrar = ver;
+                    if(ver.modelo.equals("IPhone 12")){
+                        URL imageUrl = getClass().getResource("/image/1-front-back-green-thumbnail.png");
+                        DetallesController.image = new Image(imageUrl.toExternalForm());
+                    }else if(ver.modelo.equals("IPhone 13")){
+                        URL imageUrl = getClass().getResource("/image/01-iphone-13-pro-max-128gb-plateado-front.png");
+                        DetallesController.image = new Image(imageUrl.toExternalForm());
+                    }else if(ver.modelo.equals("IPhone 14")){
+                        URL imageUrl = getClass().getResource("/image/iphone-14-starlight-1__55760.png");
+                        DetallesController.image = new Image(imageUrl.toExternalForm());
+                    }else if(ver.modelo.equals("IPhone 15")){
+                        URL imageUrl = getClass().getResource("/image/iPhone_15_Pro_Max_Titanio_Natural_256GB16948086964.png");
+                        DetallesController.image = new Image(imageUrl.toExternalForm());
+                    }
+                    loadStage("/principal/detalles.fxml", e);
+                    productos.removeAll(productos);
+                }
+                ver = ver.sig;
+            }
+            
         }
         if(evt.equals(inicio)){
             productos.removeAll(productos);

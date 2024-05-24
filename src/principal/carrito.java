@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author danie
+ * @author Admin
  */
 public class carrito {
     public static producto cab;
@@ -25,7 +25,6 @@ public class carrito {
         producto p = CrearNodo(modelo, comprador, descripcion, precio);
         if (cab == null) {
             cab = p;
-            JOptionPane.showMessageDialog(null, p.modelo);
         } else {
             p.sig = cab;
             cab = p;
