@@ -49,7 +49,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Historial" />
+            <Button fx:id="historial" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Historial" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" GridPane.rowIndex="1">
@@ -76,7 +76,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Comprar">
+                  <Button fx:id="cIPhone12" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Comprar">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -105,7 +105,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Comprar">
+                  <Button fx:id="cIPhone13" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Comprar">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -134,7 +134,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Comprar">
+                  <Button fx:id="cIPhone14" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Comprar">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -163,7 +163,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Comprar">
+                  <Button fx:id="cIPhone15" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Comprar">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

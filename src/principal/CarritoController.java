@@ -39,6 +39,7 @@ import javax.swing.JOptionPane;
  */
 public class CarritoController implements Initializable {
     
+    public static historial hist = new historial();
     
     @FXML
     private TableView<producto> tabla;
@@ -55,7 +56,7 @@ public class CarritoController implements Initializable {
     public static ObservableList<producto> productos = FXCollections.observableArrayList();
     
     @FXML
-    private Button detalles, inicio;
+    private Button detalles, inicio, compra, historial;
     
     @FXML
     private Label vtotal;
@@ -65,7 +66,6 @@ public class CarritoController implements Initializable {
         Object evt = e.getSource();
         
         if(evt.equals(detalles)){
-            InicioController.carro.getCarrito();
             String produ = tabla.getSelectionModel().getSelectedItem().getModelo();
             producto ver = InicioController.carro.cab;
             while(ver != null){
@@ -94,6 +94,21 @@ public class CarritoController implements Initializable {
         if(evt.equals(inicio)){
             productos.removeAll(productos);
             loadStage("/principal/inicio.fxml", e);
+        }
+        
+        if(evt.equals(compra)){
+            String produ = tabla.getSelectionModel().getSelectedItem().getModelo();
+            producto comprar = InicioController.carro.cab;
+            while(comprar != null){
+                if(comprar.modelo.equals(produ) && comprar.comprador.equals(InicioController.user)){
+                    hist.crearLista(comprar.modelo, comprar.comprador, comprar.descripcion, comprar.precio);
+                    InicioController.carro.eliminarProducto(comprar.modelo, comprar.comprador);
+                    JOptionPane.showMessageDialog(null, "Producto comprado con exito!");
+                    hist.getHistorial();
+                    loadStage("/principal/historial.fxml", e);
+                }
+                comprar = comprar.sig;
+            }
         }
     }
 

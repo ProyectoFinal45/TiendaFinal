@@ -36,7 +36,7 @@ public class InicioController implements Initializable {
     public static carrito carro = new carrito();
     
     @FXML
-    private Button salir, btncarrito, iphone12, iphone13, iphone14, iphone15;
+    private Button salir, historial, btncarrito, iphone12, iphone13, iphone14, iphone15, cIPhone12, cIPhone13, cIPhone14, cIPhone15;
     
     public void actionEvent (ActionEvent e){
         
@@ -45,6 +45,9 @@ public class InicioController implements Initializable {
         if(evt.equals(salir)){
             user = "";
             loadStage("/principal/base.fxml", e);
+        }
+        if(evt.equals(historial)){
+            
         }
         if(evt.equals(btncarrito)){
             carro.getCarrito();
@@ -81,6 +84,38 @@ public class InicioController implements Initializable {
             String precio = "4000000";
             carro.crearLista(modelo, comprador, descripcion, precio);
             JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
+        }
+        if(evt.equals(cIPhone12)){
+            String modelo = "IPhone 15";
+            String comprador = InicioController.user;
+            String descripcion = "1TB de almacenamiento";
+            String precio = "4000000";
+            CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Comprado con exito!");
+        }
+        if(evt.equals(cIPhone13)){
+            String modelo = "IPhone 15";
+            String comprador = InicioController.user;
+            String descripcion = "1TB de almacenamiento";
+            String precio = "4000000";
+            CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Comprado con exito!");
+        }
+        if(evt.equals(cIPhone14)){
+            String modelo = "IPhone 15";
+            String comprador = InicioController.user;
+            String descripcion = "1TB de almacenamiento";
+            String precio = "4000000";
+            CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Comprado con exito!");
+        }
+        if(evt.equals(cIPhone15)){
+            String modelo = "IPhone 15";
+            String comprador = InicioController.user;
+            String descripcion = "1TB de almacenamiento";
+            String precio = "4000000";
+            CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Comprado con exito!");
         }
     }
 

@@ -32,7 +32,7 @@ public class historial {
         producto p = cab;
         do {
             if(p.comprador.equals(InicioController.user)){
-                CarritoController.productos.add(p);
+                HistorialController.productos.add(p);
             }
             p = p.sig;
         }while(p != null);

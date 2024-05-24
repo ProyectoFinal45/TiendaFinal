@@ -51,4 +51,28 @@ public class carrito {
         } while(p != null);
         return valor;
     }
+    
+    public void eliminarProducto(String modelo, String comprador) {
+        producto anterior = null;
+        producto actual = cab;
+
+        // Recorrer la lista
+        while (actual != null) {
+            // Verificar si el modelo y el comprador del producto coinciden
+            if (actual.modelo.equals(modelo) && actual.comprador.equals(comprador)) {
+                // Si es el primer elemento de la lista
+                if (anterior == null) {
+                    cab = actual.sig; // El siguiente producto se convierte en la cabecera
+                } else {
+                    // Si no es el primer elemento, se salta el producto actual
+                    anterior.sig = actual.sig;
+                }
+                return; // Salir del método después de eliminar el producto
+            }
+
+            // Avanzar al siguiente nodo
+            anterior = actual;
+            actual = actual.sig;
+        }
+    }
 }
