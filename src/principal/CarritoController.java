@@ -85,6 +85,7 @@ public class CarritoController implements Initializable {
                         DetallesController.image = new Image(imageUrl.toExternalForm());
                     }
                     loadStage("/principal/detalles.fxml", e);
+                    ver = null;
                     productos.removeAll(productos);
                 }
                 ver = ver.sig;
@@ -104,11 +105,18 @@ public class CarritoController implements Initializable {
                     hist.crearLista(comprar.modelo, comprar.comprador, comprar.descripcion, comprar.precio);
                     InicioController.carro.eliminarProducto(comprar.modelo, comprar.comprador);
                     JOptionPane.showMessageDialog(null, "Producto comprado con exito!");
+                    comprar = null;
+                    productos.removeAll(productos);
                     hist.getHistorial();
                     loadStage("/principal/historial.fxml", e);
                 }
                 comprar = comprar.sig;
             }
+        }
+        if(evt.equals(historial)){
+            hist.getHistorial();
+            productos.removeAll(productos);
+            loadStage("/principal/historial.fxml", e);
         }
     }
 

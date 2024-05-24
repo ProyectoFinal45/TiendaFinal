@@ -57,6 +57,11 @@ public class DetallesController implements Initializable {
             carro.getCarrito();
             loadStage("/principal/carrito.fxml", e);
         }
+        if(evt.equals(historial)){
+            CarritoController.hist.getHistorial();
+            loadStage("/principal/historial.fxml", e);
+        }
+        
     }
     /**
      * Initializes the controller class.

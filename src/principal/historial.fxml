@@ -41,8 +41,8 @@
                   <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="inicio" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Inicio" />
-            <Button fx:id="carrito" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Carrito">
+            <Button fx:id="inicio" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Inicio" />
+            <Button fx:id="carrito" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Carrito">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
@@ -60,7 +60,7 @@
             </TableView>
             <VBox alignment="TOP_CENTER" prefHeight="280.0" prefWidth="170.0">
                <children>
-                  <Button fx:id="detalles" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Detalles">
+                  <Button fx:id="detalles" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Detalles">
                      <VBox.margin>
                         <Insets top="30.0" />
                      </VBox.margin>

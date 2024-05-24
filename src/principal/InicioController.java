@@ -47,7 +47,8 @@ public class InicioController implements Initializable {
             loadStage("/principal/base.fxml", e);
         }
         if(evt.equals(historial)){
-            
+            CarritoController.hist.getHistorial();
+            loadStage("/principal/historial.fxml", e);
         }
         if(evt.equals(btncarrito)){
             carro.getCarrito();
@@ -86,26 +87,26 @@ public class InicioController implements Initializable {
             JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
         }
         if(evt.equals(cIPhone12)){
-            String modelo = "IPhone 15";
+            String modelo = "IPhone 12";
             String comprador = InicioController.user;
-            String descripcion = "1TB de almacenamiento";
-            String precio = "4000000";
+            String descripcion = "256GB de almacenamiento";
+            String precio = "2500000";
             CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
             JOptionPane.showMessageDialog(null, "Comprado con exito!");
         }
         if(evt.equals(cIPhone13)){
-            String modelo = "IPhone 15";
+            String modelo = "IPhone 13";
             String comprador = InicioController.user;
-            String descripcion = "1TB de almacenamiento";
-            String precio = "4000000";
+            String descripcion = "512GB de almacenamiento";
+            String precio = "2900000";
             CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
             JOptionPane.showMessageDialog(null, "Comprado con exito!");
         }
         if(evt.equals(cIPhone14)){
-            String modelo = "IPhone 15";
+            String modelo = "IPhone 14";
             String comprador = InicioController.user;
-            String descripcion = "1TB de almacenamiento";
-            String precio = "4000000";
+            String descripcion = "512GB de almacenamiento";
+            String precio = "3600000";
             CarritoController.hist.crearLista(modelo, comprador, descripcion, precio);
             JOptionPane.showMessageDialog(null, "Comprado con exito!");
         }
