@@ -36,7 +36,7 @@ public class InicioController implements Initializable {
     public static carrito carro = new carrito();
     
     @FXML
-    private Button salir, btncarrito, iphone12;
+    private Button salir, btncarrito, iphone12, iphone13, iphone14, iphone15;
     
     public void actionEvent (ActionEvent e){
         
@@ -56,7 +56,31 @@ public class InicioController implements Initializable {
             String descripcion = "256GB de almacenamiento";
             String precio = "2500000";
             carro.crearLista(modelo, comprador, descripcion, precio);
-            JOptionPane.showMessageDialog(null, carro.cab);
+            JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
+        }
+        if(evt.equals(iphone13)){
+            String modelo = "IPhone 13";
+            String comprador = InicioController.user;
+            String descripcion = "512GB de almacenamiento";
+            String precio = "2900000";
+            carro.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
+        }
+        if(evt.equals(iphone14)){
+            String modelo = "IPhone 14";
+            String comprador = InicioController.user;
+            String descripcion = "512GB de almacenamiento";
+            String precio = "3600000";
+            carro.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
+        }
+        if(evt.equals(iphone15)){
+            String modelo = "IPhone 15";
+            String comprador = InicioController.user;
+            String descripcion = "1TB de almacenamiento";
+            String precio = "4000000";
+            carro.crearLista(modelo, comprador, descripcion, precio);
+            JOptionPane.showMessageDialog(null, "Añadido al carrito con exito!");
         }
     }
 

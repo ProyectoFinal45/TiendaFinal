@@ -100,7 +100,7 @@
                         <Font name="System Bold" size="11.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Agregar al carrito">
+                  <Button fx:id="iphone13" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Agregar al carrito">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -129,7 +129,7 @@
                         <Font name="System Bold" size="11.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Agregar al carrito">
+                  <Button fx:id="iphone14" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Agregar al carrito">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -158,7 +158,7 @@
                         <Font name="System Bold" size="11.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-radius: 90;" text="Agregar al carrito">
+                  <Button fx:id="iphone15" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-radius: 90;" text="Agregar al carrito">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
